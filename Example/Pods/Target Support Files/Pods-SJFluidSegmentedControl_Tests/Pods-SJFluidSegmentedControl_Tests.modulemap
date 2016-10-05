@@ -1,0 +1,6 @@
+framework module Pods_SJFluidSegmentedControl_Tests {
+  umbrella header "Pods-SJFluidSegmentedControl_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "SJFluidSegmentedControl",
+  "version": "0.1.0",
+  "summary": "A short description of SJFluidSegmentedControl.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SJFluidSegmentedControl",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Sasho Jadrovski": "saso@3pdevelopment.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SJFluidSegmentedControl.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SJFluidSegmentedControl/Classes/**/*"
+}
