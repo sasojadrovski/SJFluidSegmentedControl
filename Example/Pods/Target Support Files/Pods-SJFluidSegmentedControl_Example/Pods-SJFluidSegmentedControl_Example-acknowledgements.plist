@@ -14,7 +14,9 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright (c) 2016 Sasho Jadrovski &lt;saso@3pdevelopment.com&gt;
+			<string>The MIT License (MIT)
+
+Copyright (c) 2016 Sasho Jadrovski &lt;saso.jadrovski@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,25 +1,124 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SJFluidSegmentedControl_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csp-ih-kI1">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-ld-UJX">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eY0-ld-UJX" secondAttribute="height" multiplier="6:4" id="hsL-Ri-Ozv"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eY0-ld-UJX" secondAttribute="trailing" id="8qP-ht-gdG"/>
+                                    <constraint firstItem="eY0-ld-UJX" firstAttribute="leading" secondItem="csp-ih-kI1" secondAttribute="leading" id="GPE-HS-hMa"/>
+                                    <constraint firstItem="eY0-ld-UJX" firstAttribute="top" secondItem="csp-ih-kI1" secondAttribute="top" id="Kgf-2W-8ew"/>
+                                    <constraint firstAttribute="bottom" secondItem="eY0-ld-UJX" secondAttribute="bottom" id="hoy-6E-FRz"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-St-S1b">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vS1-h8-2OB" userLabel="Content View">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-CT-7yb">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1177" id="CCb-Ba-fO6"/>
+                                                    <constraint firstAttribute="height" constant="226" id="p0g-0t-bsu"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="cxy-CT-7yb" firstAttribute="top" secondItem="vS1-h8-2OB" secondAttribute="top" constant="25" id="fBn-sw-MFV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cxy-CT-7yb" firstAttribute="leading" secondItem="g5i-St-S1b" secondAttribute="leading" id="8Pp-df-Mkk"/>
+                                    <constraint firstAttribute="bottom" secondItem="vS1-h8-2OB" secondAttribute="bottom" id="D6K-1L-LmG"/>
+                                    <constraint firstAttribute="trailing" secondItem="vS1-h8-2OB" secondAttribute="trailing" id="FRI-kQ-4AM"/>
+                                    <constraint firstItem="vS1-h8-2OB" firstAttribute="top" secondItem="g5i-St-S1b" secondAttribute="top" id="sca-Pr-aKa"/>
+                                    <constraint firstItem="vS1-h8-2OB" firstAttribute="leading" secondItem="g5i-St-S1b" secondAttribute="leading" id="shR-wN-Bmn"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE MOON LOOKS LOVELY TONIGHT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySf-fS-m4c">
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCd-Uo-M3q" customClass="SJFluidSegmentedControl" customModule="SJFluidSegmentedControl">
+                                <color key="backgroundColor" red="0.0" green="0.20784313725490194" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="euj-Qy-oeA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedSegmentTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="LmR-Rw-o4q"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="CEL-Rj-luD"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ySf-fS-m4c" firstAttribute="leading" secondItem="ZCd-Uo-M3q" secondAttribute="leading" id="36R-v8-U40"/>
+                            <constraint firstItem="ySf-fS-m4c" firstAttribute="trailing" secondItem="ZCd-Uo-M3q" secondAttribute="trailing" id="5X8-ul-IPd"/>
+                            <constraint firstItem="g5i-St-S1b" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="G3I-Jy-AAg"/>
+                            <constraint firstAttribute="bottom" secondItem="g5i-St-S1b" secondAttribute="bottom" id="H62-h2-aSS"/>
+                            <constraint firstItem="eY0-ld-UJX" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="M6z-44-NVh"/>
+                            <constraint firstItem="csp-ih-kI1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Thn-aN-5xQ"/>
+                            <constraint firstItem="csp-ih-kI1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Z72-Lw-xVb"/>
+                            <constraint firstAttribute="trailing" secondItem="g5i-St-S1b" secondAttribute="trailing" id="ZNP-c2-2Y2"/>
+                            <constraint firstAttribute="bottom" secondItem="csp-ih-kI1" secondAttribute="bottom" id="Zb3-Bc-07T"/>
+                            <constraint firstItem="vS1-h8-2OB" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="aCZ-x2-DFk"/>
+                            <constraint firstItem="vS1-h8-2OB" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="c4c-dw-Vqc"/>
+                            <constraint firstItem="g5i-St-S1b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="dfX-Wj-Wiy"/>
+                            <constraint firstItem="ZCd-Uo-M3q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="37" id="jJi-sf-yaH"/>
+                            <constraint firstAttribute="trailing" secondItem="csp-ih-kI1" secondAttribute="trailing" id="lqy-PZ-It2"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZCd-Uo-M3q" secondAttribute="bottom" constant="30" id="nFy-9d-0re"/>
+                            <constraint firstItem="ZCd-Uo-M3q" firstAttribute="top" secondItem="ySf-fS-m4c" secondAttribute="bottom" constant="10" id="phL-FH-7V6"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCd-Uo-M3q" secondAttribute="trailing" constant="38" id="prU-i3-8QI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundScrollView" destination="csp-ih-kI1" id="gZK-jX-voX"/>
+                        <outlet property="segmentedControl" destination="ZCd-Uo-M3q" id="mSH-aJ-xVf"/>
+                        <outlet property="skyScrollView" destination="g5i-St-S1b" id="2UQ-Ay-Wyp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="988" height="667"/>
+        <image name="sky" width="1177" height="226"/>
+    </resources>
 </document>

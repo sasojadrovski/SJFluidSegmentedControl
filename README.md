@@ -85,7 +85,7 @@ $ pod install
 func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int
 ```
 
-Additionaly, you can set the `cornerRadius`, `textColor`, `selectedSegmentTextColor` and `selectorViewColor` properties by using the Attributes inspector.
+Additionaly, you can set the `cornerRadius`, `textColor`, `selectedSegmentTextColor`, `selectorViewColor`, `applyCornerRadiusToSelectorView`, `gradientBounceColor`, `shadowShowDuration`, `shadowHideDuration` and `shadowsEnabled` properties by using the Attributes inspector.
 
 ![Attributes](https://raw.githubusercontent.com/sasojadrovski/SJFluidSegmentedControl/master/Screenshots/attributes.png)
 
