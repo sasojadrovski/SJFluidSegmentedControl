@@ -870,8 +870,8 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         var widthConstraintIsInstalled = false
         if let constraints = view.superview?.constraints {
             for constraint in constraints {
-                if constraint.firstAttribute == .width && (constraint.firstItem as! UIView == view ||
-                    constraint.secondItem as! UIView == view) {
+                if constraint.firstAttribute == .width && (constraint.firstItem as? UIView == view ||
+                    constraint.secondItem as? UIView == view) {
                     widthConstraintIsInstalled = true
                 }
             }
