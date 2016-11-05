@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         segmentedControl(segmentedControl, didScrollWithXOffset: 0)
+//        segmentedControl.currentSegment = 1
     }
     
 }
@@ -39,7 +40,8 @@ extension ViewController: SJFluidSegmentedControlDataSource {
         return 3
     }
     
-    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, titleForSegmentAtIndex index: Int) -> String? {
+    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+                          titleForSegmentAtIndex index: Int) -> String? {
         if index == 0 {
             return "Let's".uppercased()
         } else if index == 1 {
