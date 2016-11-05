@@ -227,7 +227,13 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     }
     
     /// The index of the currently selected segment. It ranges from 0 to segmentsCount-1.
-    fileprivate(set) public var currentSegment: Int = 0
+    open var currentSegment: Int = 0 {
+        didSet {
+            if currentSegment != oldValue {
+                setCurrentSegmentIndex(currentSegment, animated: false)
+            }
+        }
+    }
     
     /// The number of segments in the segmented control. Default is `1`.
     fileprivate(set) public var segmentsCount: Int = 1
@@ -1019,11 +1025,15 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         delegate?.segmentedControl?(self, didChangeFromSegmentAtIndex: fromSegment, toSegmentAtIndex: index)
     }
     
-    fileprivate func setCurrentSegmentIndex(_ index: Int, animated shouldAnimate: Bool) {
+    /// Sets the currently selected segment.
+    ///
+    /// - parameter index:         The index of the currently selected segment.
+    /// - parameter shouldAnimate: `true` if the change should be animated, otherwise `false`.
+    public func setCurrentSegmentIndex(_ index: Int, animated shouldAnimate: Bool) {
         assert(dataSource != nil,
                "Data source of segmented control: \(self) wasn't set. In order to use segmented control, set its data source.")
-        assert(currentSegment < segmentsCount && currentSegment >= 0,
-               "Unable to set segment \(currentSegment). Segmented control has only \(segmentsCount) segments, from 0 to \(segmentsCount - 1)")
+        assert(index < segmentsCount && index >= 0,
+               "Unable to set segment \(index). Segmented control has only \(segmentsCount) segments, from 0 to \(segmentsCount - 1)")
         
         if !shouldAnimate {
             currentSegment = index
