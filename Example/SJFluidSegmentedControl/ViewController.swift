@@ -21,7 +21,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
+        if #available(iOS 8.2, *) {
+            segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
+        } else {
+            segmentedControl.textFont = .boldSystemFont(ofSize: 16)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

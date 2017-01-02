@@ -18,7 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 9.0+ 
+- iOS 8.0+ 
 - Xcode 8.0+
 - Swift 3.0+
 
@@ -52,7 +52,7 @@ To integrate `SJFluidSegmentedControl` into your Xcode project using CocoaPods, 
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
