@@ -1,6 +1,5 @@
 # SJFluidSegmentedControl
 
-[![CI Status](http://img.shields.io/travis/Sasho Jadrovski/SJFluidSegmentedControl.svg?style=flat)](https://travis-ci.org/Sasho Jadrovski/SJFluidSegmentedControl)
 [![Version](https://img.shields.io/cocoapods/v/SJFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/SJFluidSegmentedControl)
 [![Downloads](https://img.shields.io/cocoapods/dt/SJFluidSegmentedControl.svg?maxAge=2592000)](http://cocoapods.org/pods/SJFluidSegmentedControl)
 [![License](https://img.shields.io/cocoapods/l/SJFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/SJFluidSegmentedControl)
@@ -208,8 +207,8 @@ Additionaly, if you need to take control over the transitions between the segmen
 Other customization options are available through the following publicly available properties:
 
 ```swift
-// The index of the currently selected segment. It ranges from 0 to segmentsCount-1.
-fileprivate(set) public var currentSegment: Int
+// The index of the currently selected segment. It ranges from 0 to segmentsCount-1. Default is `0`.
+open var currentSegment: Int
 
 // The number of segments in the segmented control. Default is `1`.
 fileprivate(set) public var segmentsCount: Int
