@@ -27,7 +27,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         segmentedControl(segmentedControl, didScrollWithXOffset: 0)
-//        segmentedControl.currentSegment = 1
+        
+        // Uncomment the following line to set the current segment programmatically.
+        // segmentedControl.currentSegment = 1
     }
     
 }
@@ -64,9 +66,8 @@ extension ViewController: SJFluidSegmentedControlDataSource {
                     UIColor(red: 9 / 255.0, green: 82 / 255.0, blue: 107 / 255.0, alpha: 1.0)]
         default:
             break
-            
         }
-        return [UIColor.clear]
+        return [.clear]
     }
     
     func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
@@ -77,7 +78,6 @@ extension ViewController: SJFluidSegmentedControlDataSource {
         case .right:
             return [UIColor(red: 9 / 255.0, green: 82 / 255.0, blue: 107 / 255.0, alpha: 1.0)]
         }
-        
     }
 
 }
@@ -88,11 +88,11 @@ extension ViewController: SJFluidSegmentedControlDelegate {
     
     func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didScrollWithXOffset offset: CGFloat) {
         let maxOffset = segmentedControl.frame.width / CGFloat(segmentedControl.segmentsCount * (segmentedControl.segmentsCount - 1))
-        var width = self.view.frame.width * 0.2
+        var width = view.frame.width * 0.2
         var leftDistance = (backgroundScrollView.contentSize.width - width) * 0.2
         var rightDistance = (backgroundScrollView.contentSize.width - width) * 0.8
         let backgroundScrollViewOffset = leftDistance + ((offset / maxOffset) * (backgroundScrollView.contentSize.width - rightDistance - leftDistance))
-        width = self.view.frame.width
+        width = view.frame.width
         leftDistance = -width * 0.0001 + 10
         rightDistance = width * 0.8
         let skyScrollViewOffset = leftDistance + ((offset / maxOffset) * (skyScrollView.contentSize.width - rightDistance - leftDistance))
