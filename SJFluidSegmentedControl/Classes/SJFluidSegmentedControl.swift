@@ -1500,7 +1500,7 @@ extension SJFluidSegmentedControl: UIScrollViewDelegate {
         let leftIndex = leftSegmentIndexFromPercentage(percent)
         let rightIndex = rightSegmentIndexFromPercentage(percent)
         
-        changedViews.subtracting(changedViews.filter({ (number) -> Bool in
+        let _ = changedViews.subtracting(changedViews.filter({ (number) -> Bool in
             if number == leftIndex {
                 return false
             }
