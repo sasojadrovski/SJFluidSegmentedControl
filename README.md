@@ -36,6 +36,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
 
+## Apps using this library
+
+- [Uread](https://itunes.apple.com/us/app/you-duuread-zhi-gei-xiang/id1175225244) for iPhone/iPad by [@Jinkeycode](https://github.com/Jinkeycode) ([Preview](https://cloud.githubusercontent.com/assets/12148377/21546445/c55b05f0-ce19-11e6-9d28-1fc2febe20fd.jpeg))
+
+> If your app is using this library, I would love to add it to this README. Please reach out to me!
+
 ## Installation
 
 #### [CocoaPods](https://cocoapods.org/)
@@ -110,7 +116,7 @@ class ViewController: UIViewController, SJFluidSegmentedControlDataSource {
 	// Add it as a subview in viewDidLoad()
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.view.addSubview(segmentedControl)
+		view.addSubview(segmentedControl)
 	}
 
 	// Don't forget to implement the required data source method
