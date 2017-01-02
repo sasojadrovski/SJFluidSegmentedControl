@@ -195,6 +195,7 @@ import UIKit
                                          selectedView selectedSegmentView: UIView)
 }
 
+/// A segmented control with custom appearance and interactive animations.
 public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     
     // MARK: Public properties
@@ -308,21 +309,21 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         self.addSubview($0)
         self.bringSubview(toFront: $0)
         return $0
-    }(UIScrollView(frame: CGRect.zero))
+    }(UIScrollView(frame: .zero))
     
     fileprivate lazy var leftSpacerView: UIView = {
         [unowned self] in
         $0.translatesAutoresizingMaskIntoConstraints = false
         self.scrollView.addSubview($0)
         return $0
-    }(UIView(frame: CGRect.zero))
+    }(UIView(frame: .zero))
     
     fileprivate lazy var rightSpacerView: UIView = {
         [unowned self] in
         $0.translatesAutoresizingMaskIntoConstraints = false
         self.scrollView.addSubview($0)
         return $0
-    }(UIView(frame: CGRect.zero))
+    }(UIView(frame: .zero))
     
     fileprivate lazy var selectorView: UIView = {
         [unowned self] in
@@ -332,7 +333,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         self.scrollView.addSubview($0)
         $0.backgroundColor = self.selectorViewColor
         return $0
-    }(UIView(frame: CGRect.zero))
+    }(UIView(frame: .zero))
     
     fileprivate lazy var leftLimiterView: UIView = {
         [unowned self] in
@@ -361,7 +362,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                               multiplier: 1.0,
                                               constant: 0.0))
         return $0
-    }(UIView(frame: CGRect.zero))
+    }(UIView(frame: .zero))
     
     fileprivate lazy var rightLimiterView: UIView = {
         [unowned self] in
@@ -390,7 +391,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                               multiplier: 1.0,
                                               constant: 0.0))
         return $0
-    }(UIView(frame: CGRect.zero))
+    }(UIView(frame: .zero))
     
     fileprivate lazy var shadowView: UIView = {
         [unowned self] in
@@ -425,11 +426,11 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                         constant: 0.0)
         self.addConstraint(constraint)
         return $0
-    }(UIView(frame: CGRect.zero))
+    }(UIView(frame: .zero))
     
     fileprivate lazy var gradientView: SJGradientView = {
         [unowned self] in
-        let fakeView = UIView(frame: CGRect.zero)
+        let fakeView = UIView(frame: .zero)
         fakeView.clipsToBounds = true
         fakeView.layer.masksToBounds = true
         fakeView.translatesAutoresizingMaskIntoConstraints = false
@@ -454,7 +455,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                               attribute: .bottom,
                                               multiplier: 1.0,
                                               constant: 0.0))
-        let gradientView = SJGradientView(frame: CGRect.zero)
+        let gradientView = SJGradientView(frame: .zero)
         gradientView.translatesAutoresizingMaskIntoConstraints = false
         fakeView.addSubview(gradientView)
         self.gradientViewContainer = fakeView
@@ -484,11 +485,17 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     
     // MARK: - Initialization
     
+    /// Initializes the segmented control with a specified frame rectangle.
+    ///
+    /// - Parameter frame: The frame rectangle for the segmented control view, measured in points.
     public override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
     
+    /// Returns an object initialized from data in a given unarchiver.
+    ///
+    /// - Parameter aDecoder: An unarchiver object.
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -514,6 +521,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     
     // MARK: - View Lifecycle
     
+    /// Lays out subviews.
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.layoutIfNeeded()
@@ -1091,7 +1099,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         var view: UIView?
         view = dataSource?.segmentedControl?(self, viewForSegmentAtIndex: index)
         if view == nil {
-            let label = UILabel(frame: CGRect.zero)
+            let label = UILabel(frame: .zero)
             setupLabel(label, forSegmentAtIndex: index, selected: false)
             view = label
         }
@@ -1106,7 +1114,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
             view = dataSource?.segmentedControl?(self, viewForSegmentAtIndex: index)
         }
         if view == nil {
-            let label = UILabel(frame: CGRect.zero)
+            let label = UILabel(frame: .zero)
             setupLabel(label, forSegmentAtIndex: index, selected: true)
             view = label
         }
@@ -1160,7 +1168,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     
     fileprivate func setupSegmentViewsWithCount(_ count: Int) {
         for index in 0 ..< count {
-            let viewContainer = UIView(frame: CGRect.zero)
+            let viewContainer = UIView(frame: .zero)
             viewContainer.translatesAutoresizingMaskIntoConstraints = false
             viewContainer.isUserInteractionEnabled = false
             viewContainer.backgroundColor = .clear
@@ -1187,7 +1195,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     
     fileprivate func setupSelectedSegmentViewsWithCount(_ count: Int) {
         for index in 0 ..< count {
-            let viewContainer = UIView(frame: CGRect.zero)
+            let viewContainer = UIView(frame: .zero)
             viewContainer.translatesAutoresizingMaskIntoConstraints = false
             viewContainer.isUserInteractionEnabled = false
             viewContainer.backgroundColor = .clear
@@ -1469,16 +1477,28 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
 
 extension SJFluidSegmentedControl: UIScrollViewDelegate {
     
+    /// Tells the delegate when the scroll view is about to start scrolling the content.
+    ///
+    /// - Parameter scrollView: The scroll-view object that is about to scroll the content view.
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         delegate?.segmentedControl?(self, willChangeFromSegment: currentSegment)
     }
     
+    /// Tells the delegate when the user finishes scrolling the content.
+    ///
+    /// - Parameters:
+    ///   - scrollView: The scroll-view object where the user ended the touch.
+    ///   - velocity: The velocity of the scroll view (in points) at the moment the touch was released.
+    ///   - targetContentOffset: The expected offset when the scrolling action decelerates to a stop.
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if dataSource != nil {
             targetContentOffset.pointee = nearestSegmentOffsetFromOffset(targetContentOffset.pointee)
         }
     }
     
+    /// Tells the delegate that the scroll view has ended decelerating the scrolling movement.
+    ///
+    /// - Parameter scrollView: The scroll-view object that is decelerating the scrolling of the content view.
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x < 0 || scrollView.contentOffset.x > self.bounds.width - selectorView.bounds.width {
             return
@@ -1486,11 +1506,17 @@ extension SJFluidSegmentedControl: UIScrollViewDelegate {
         changeSegmentToSegmentAtIndex(segmentFromOffset(scrollView.contentOffset))
     }
     
+    /// Tells the delegate when a scrolling animation in the scroll view concludes.
+    ///
+    /// - Parameter scrollView: The scroll-view object that is performing the scrolling animation.
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         changeSegmentToSegmentAtIndex(segmentFromOffset(scrollView.contentOffset))
         self.isUserInteractionEnabled = true
     }
     
+    /// Tells the delegate when the user scrolls the content view within the receiver.
+    ///
+    /// - Parameter scrollView: The scroll-view object that is performing the scrolling animation.
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.segmentedControl?(self, didScrollWithXOffset: self.frame.width - self.scrollView.contentOffset.x - selectorView.frame.width)
         if offsetFromSegment(segmentFromOffset(scrollView.contentOffset)).x != scrollView.contentOffset.x {
