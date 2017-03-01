@@ -1465,8 +1465,9 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     }
     
     fileprivate func updateLayoutDependantValues() {
+        let savedCurrentSegment = currentSegment
         currentSegment = 0
-        setCurrentSegmentIndex(currentSegment, animated: false)
+        setCurrentSegmentIndex(savedCurrentSegment, animated: false)
         wereLayoutDependantValuesUpdated = true
     }
 
