@@ -344,7 +344,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                                 toItem: self, attribute: .left,
                                                 multiplier: 1.0,
                                                 constant: 0.0)
-        leftConstraint.priority = UILayoutPriorityDefaultHigh
+        leftConstraint.priority = UILayoutPriority.defaultHigh
         self.addConstraint(leftConstraint)
         self.addConstraint(NSLayoutConstraint(item: $0, attribute: .right,
                                               relatedBy: .equal,
@@ -373,7 +373,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                                  toItem: self, attribute: .right,
                                                  multiplier: 1.0,
                                                  constant: 0.0)
-        rightConstraint.priority = UILayoutPriorityDefaultHigh
+        rightConstraint.priority = UILayoutPriority.defaultHigh
         self.addConstraint(rightConstraint)
         self.addConstraint(NSLayoutConstraint(item: $0, attribute: .left,
                                               relatedBy: .equal,
@@ -986,13 +986,14 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
     fileprivate func gradientColorForBounce(_ bounce: SJFluidSegmentedControlBounce) -> [UIColor] {
         var colors: [UIColor]?
         colors = dataSource?.segmentedControl?(self, gradientColorsForBounce: bounce)
+        var colorsCopy = colors
+        
         if colors == nil {
-            colors = [gradientBounceColor]
+            colorsCopy = [gradientBounceColor]
+        } else if colors!.count == 1 {
+            colorsCopy?.append((colors?.first)!)
         }
-        if colors!.count == 1 {
-            colors?.append((colors?.first)!)
-        }
-        return colors!
+        return colorsCopy!
     }
     
     // MARK: - Shadow Setup
