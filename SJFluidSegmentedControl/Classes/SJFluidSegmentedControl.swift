@@ -344,7 +344,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                                 toItem: self, attribute: .left,
                                                 multiplier: 1.0,
                                                 constant: 0.0)
-        leftConstraint.priority = UILayoutPriorityDefaultHigh
+        leftConstraint.priority = UILayoutPriority.defaultHigh
         self.addConstraint(leftConstraint)
         self.addConstraint(NSLayoutConstraint(item: $0, attribute: .right,
                                               relatedBy: .equal,
@@ -373,7 +373,7 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
                                                  toItem: self, attribute: .right,
                                                  multiplier: 1.0,
                                                  constant: 0.0)
-        rightConstraint.priority = UILayoutPriorityDefaultHigh
+        rightConstraint.priority = UILayoutPriority.defaultHigh
         self.addConstraint(rightConstraint)
         self.addConstraint(NSLayoutConstraint(item: $0, attribute: .left,
                                               relatedBy: .equal,
@@ -990,7 +990,8 @@ public class SJFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
             colors = [gradientBounceColor]
         }
         if colors!.count == 1 {
-            colors?.append((colors?.first)!)
+            let firstColor = (colors?.first)!
+            colors?.append(firstColor)
         }
         return colors!
     }
