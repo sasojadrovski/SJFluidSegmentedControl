@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'SJFluidSegmentedControl'
-s.version          = '1.1.2'
+s.version          = '1.1.3'
 s.summary          = 'A segmented control with custom appearance and interactive animations.'
 
 s.description      = <<-DESC
