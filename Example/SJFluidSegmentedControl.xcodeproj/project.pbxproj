@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3981E15933B77769B6520D18 /* Pods_SJFluidSegmentedControl_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174DEE9B9642DD6B8C481AA5 /* Pods_SJFluidSegmentedControl_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0436F234FFEBBC356C9FEB65 /* Pods-SJFluidSegmentedControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJFluidSegmentedControl_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJFluidSegmentedControl_Tests/Pods-SJFluidSegmentedControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		174DEE9B9642DD6B8C481AA5 /* Pods_SJFluidSegmentedControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJFluidSegmentedControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46738C80038FF9D74009CF2F /* Pods_SJFluidSegmentedControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJFluidSegmentedControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF3F7D20ED380CB44FAEF95 /* Pods-SJFluidSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJFluidSegmentedControl_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJFluidSegmentedControl_Example/Pods-SJFluidSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SJFluidSegmentedControl_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJFluidSegmentedControl_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +40,6 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		734415E75A40A0FFDD4FDA89 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		9D57DB709ED5A91BF604DA72 /* Pods-SJFluidSegmentedControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJFluidSegmentedControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJFluidSegmentedControl_Tests/Pods-SJFluidSegmentedControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8F6E212FFDED24BD1EB0EAC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CA4A943044075E5F53579A48 /* SJFluidSegmentedControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SJFluidSegmentedControl.podspec; path = ../SJFluidSegmentedControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FDE2FC636FAB8D18D5381B5E /* Pods-SJFluidSegmentedControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJFluidSegmentedControl_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJFluidSegmentedControl_Example/Pods-SJFluidSegmentedControl_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3981E15933B77769B6520D18 /* Pods_SJFluidSegmentedControl_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +139,6 @@
 			children = (
 				4EF3F7D20ED380CB44FAEF95 /* Pods-SJFluidSegmentedControl_Example.debug.xcconfig */,
 				FDE2FC636FAB8D18D5381B5E /* Pods-SJFluidSegmentedControl_Example.release.xcconfig */,
-				9D57DB709ED5A91BF604DA72 /* Pods-SJFluidSegmentedControl_Tests.debug.xcconfig */,
-				0436F234FFEBBC356C9FEB65 /* Pods-SJFluidSegmentedControl_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -154,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				46738C80038FF9D74009CF2F /* Pods_SJFluidSegmentedControl_Example.framework */,
-				174DEE9B9642DD6B8C481AA5 /* Pods_SJFluidSegmentedControl_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,7 +177,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SJFluidSegmentedControl_Tests" */;
 			buildPhases = (
-				942E2BB5FF40A3814A7C8CC1 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -262,24 +253,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		942E2BB5FF40A3814A7C8CC1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SJFluidSegmentedControl_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		991F278A5797251865F3AC2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,7 +482,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D57DB709ED5A91BF604DA72 /* Pods-SJFluidSegmentedControl_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -527,7 +499,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0436F234FFEBBC356C9FEB65 /* Pods-SJFluidSegmentedControl_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tests/Info.plist;
