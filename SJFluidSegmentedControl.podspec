@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'SJFluidSegmentedControl'
-s.version          = '1.1.3'
+s.version          = '1.1.4'
 s.summary          = 'A segmented control with custom appearance and interactive animations.'
 
 s.description      = <<-DESC
@@ -15,7 +15,8 @@ s.author           = { 'Sasho Jadrovski' => 'saso.jadrovski@gmail.com' }
 s.source           = { :git => 'https://github.com/sasojadrovski/SJFluidSegmentedControl.git', :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/sasojadrovski'
 
-s.ios.deployment_target = '8.0'
+s.ios.deployment_target = '13.0'
+s.swift_version = '5.0'
 
 s.source_files = 'SJFluidSegmentedControl/Classes/**/*'
 

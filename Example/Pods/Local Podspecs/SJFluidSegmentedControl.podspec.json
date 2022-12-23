@@ -1,6 +1,6 @@
 {
   "name": "SJFluidSegmentedControl",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "summary": "A segmented control with custom appearance and interactive animations.",
   "description": "SJFluidSegmented control is a segmented control written in Swift with custom appearance and transition between the segments. It can be easily customized to suit your specific needs.",
   "homepage": "https://github.com/sasojadrovski/SJFluidSegmentedControl",
@@ -18,11 +18,13 @@
   },
   "source": {
     "git": "https://github.com/sasojadrovski/SJFluidSegmentedControl.git",
-    "tag": "1.1.1"
+    "tag": "1.1.4"
   },
   "social_media_url": "https://twitter.com/sasojadrovski",
   "platforms": {
-    "ios": "8.0"
+    "ios": "13.0"
   },
-  "source_files": "SJFluidSegmentedControl/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "SJFluidSegmentedControl/Classes/**/*",
+  "swift_version": "5.0"
 }

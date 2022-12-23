@@ -9,3 +9,4 @@ target 'SJFluidSegmentedControl_Example' do
     
   end
 end
+

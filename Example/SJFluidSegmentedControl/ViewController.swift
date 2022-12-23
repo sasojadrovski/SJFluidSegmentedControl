@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 8.2, *) {
-            segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
+            segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
         } else {
             segmentedControl.textFont = .boldSystemFont(ofSize: 16)
         }
